@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Listing | ConnectKind</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="add-listing.css">
+</head>
+<body class="add-listing-page">
+  <!-- Navigation -->
+  <nav class="custom-navbar z-depth-1">
+    <div class="nav-content container">
+      <a href="index.html" class="nav-logo-link">
+        <img src="logo.png" alt="ConnectKind Logo" class="nav-logo-img">
+        <span class="nav-logo-text">ConnectKind</span>
+      </a>
+      <span id="nav-username" class="nav-username"></span>
+      <ul class="nav-links">
+        <li><a href="search.html"><i class="material-icons left">search</i>Search</a></li>
+        <li><a href="profile.html"><i class="material-icons left">person</i>Profile</a></li>
+        <li><a href="chat.html"><i class="material-icons left">chat</i>Chat</a></li>
+        <li><a href="#" id="logout"><i class="material-icons left">exit_to_app</i>Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container add-listing-container">
+    <!-- Add Listing Form -->
+    <div class="add-listing-card z-depth-4">
+      <h4 class="center-align"><i class="material-icons left">add_circle</i>Add New Listing</h4>
+      <form id="listingForm">
+        <div class="input-field">
+          <input type="text" id="listingTitle" required>
+          <label for="listingTitle">Title</label>
+        </div>
+        <div class="input-field">
+          <input type="text" id="listingDesc" required>
+          <label for="listingDesc">Description</label>
+        </div>
+        <div class="input-field">
+          <select id="listingType" required>
+            <option value="" disabled selected>Choose type</option>
+            <option value="skill">Skill</option>
+            <option value="resource">Resource</option>
+          </select>
+          <label for="listingType">Type</label>
+        </div>
+        <button type="submit" class="btn waves-effect waves-light">
+          <i class="material-icons left">add</i>Submit
+        </button>
+      </form>
+    </div>
+
+    <!-- Your Listings -->
+    <div class="user-listings-card z-depth-4">
+      <h5 class="center-align"><i class="material-icons left">list</i>Your Listings</h5>
+      <div id="your-listings" class="row"></div>
+    </div>
+  </div>
+
+  <!-- Edit Modal -->
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <h5>Edit Listing</h5>
+      <form id="editForm">
+        <input type="hidden" id="editId">
+        <div class="input-field">
+          <input type="text" id="editTitle" required>
+          <label for="editTitle">Title</label>
+        </div>
+        <div class="input-field">
+          <input type="text" id="editDesc" required>
+          <label for="editDesc">Description</label>
+        </div>
+        <div class="input-field">
+          <select id="editType" required>
+            <option value="skill">Skill</option>
+            <option value="resource">Resource</option>
+          </select>
+          <label for="editType">Type</label>
+        </div>
+        <button type="submit" class="btn waves-effect waves-light">Update</button>
+        <button type="button" class="btn-flat modal-close">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="add-listing.js"></script>
+</body>
+</html>

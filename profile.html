@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Profile | ConnectKind</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body class="profile-page">
+  <!-- Navbar -->
+  <nav class="custom-navbar z-depth-1">
+    <div class="nav-content container">
+      <a href="index.html" class="nav-logo-link">
+        <img src="logo.png" alt="ConnectKind Logo" class="nav-logo-img">
+        <span class="nav-logo-text">ConnectKind</span>
+      </a>
+      <span id="nav-username" class="nav-username"></span>
+      <ul class="nav-links">
+        <li><a href="search.html"><i class="material-icons left">search</i>Search</a></li>
+        <li><a href="add-listing.html"><i class="material-icons left">add</i>Add Listing</a></li>
+        <li><a href="chat.html"><i class="material-icons left">chat</i>Chat</a></li>
+        <li><a href="#" id="logout"><i class="material-icons left">exit_to_app</i>Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container profile-main-container">
+    <div class="profile-grid">
+      <!-- Left Column: Profile Info -->
+      <div class="profile-left glass-card">
+        <div class="profile-header">
+          <h2 id="profile-name">Your Name</h2>
+          <p id="profile-location"><i class="material-icons tiny">location_on</i> Your Location</p>
+        </div>
+        <div class="profile-section glass-section">
+          <h5><i class="material-icons left">info</i>About</h5>
+          <p id="profile-bio">Your short bio goes here.</p>
+        </div>
+        <div class="profile-section glass-section">
+          <h5><i class="material-icons left">link</i>Contact & Social</h5>
+          <div id="social-chips" class="chips-container"></div>
+        </div>
+        <button id="edit-profile-btn" class="btn-flat edit-btn waves-effect modal-trigger" data-target="profile-edit-modal">
+          <i class="material-icons left">edit</i>Edit Profile
+        </button>
+      </div>
+
+      <!-- Right Column: Skills & Resources -->
+      <div class="profile-right glass-card">
+        <div class="profile-section glass-section">
+          <h5><i class="material-icons left">build</i>Skills Offered</h5>
+          <div id="skills-offered-chips" class="chips-container"></div>
+        </div>
+        <div class="profile-section glass-section">
+          <h5><i class="material-icons left">widgets</i>Resources Shared</h5>
+          <div id="resources-chips" class="chips-container"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Profile Edit Modal -->
+    <div id="profile-edit-modal" class="modal">
+      <div class="modal-content">
+        <h5>Edit Profile</h5>
+        <form id="profile-edit-form">
+          <div class="row">
+            <div class="input-field col s12 m6">
+              <input id="edit-name" type="text" required>
+              <label for="edit-name">Full Name</label>
+            </div>
+            <div class="input-field col s12 m6">
+              <input id="edit-location" type="text" required>
+              <label for="edit-location">Location</label>
+            </div>
+          </div>
+          <div class="input-field">
+            <textarea id="edit-bio" class="materialize-textarea" required></textarea>
+            <label for="edit-bio">Bio</label>
+          </div>
+          <div class="input-field">
+            <input id="edit-social" type="text">
+            <label for="edit-social">Contact & Social (comma separated)</label>
+          </div>
+          <button type="submit" class="btn waves-effect waves-light">Save</button>
+          <button type="button" class="btn-flat waves-effect modal-close">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="profile.js"></script>
+</body>
+</html>

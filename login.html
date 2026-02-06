@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ConnectKind | Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts for modern look -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body class="login-page">
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <img src="logo.png" alt="ConnectKind Logo" class="nav-logo" />
+      <span class="nav-title">ConnectKind</span>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link"><i class="material-icons">home</i><span>Home</span></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Glassmorphism Login/Signup Card -->
+  <div class="auth-container">
+    <div class="auth-card" id="authCard">
+      <!-- Login Form -->
+      <form id="loginForm" class="auth-form active">
+        <div class="form-header">
+          <h2>Welcome Back!</h2>
+          <div class="animated-icons">
+            <div class="icon-circle"></div>
+            <i class="material-icons">fingerprint</i>
+          </div>
+        </div>
+        <div class="input-group">
+          <input type="email" id="loginEmail" required autocomplete="username">
+          <label for="loginEmail">Email</label>
+          <i class="material-icons input-icon">mail</i>
+        </div>
+        <div class="input-group">
+          <input type="password" id="loginPassword" required autocomplete="current-password">
+          <label for="loginPassword">Password</label>
+          <i class="material-icons input-icon">lock</i>
+        </div>
+        <button type="submit" class="auth-btn">
+          <span class="btn-text">Login</span>
+        </button>
+        <p class="switch-auth">
+          New here? <a href="#" id="showSignup">Create Account</a>
+        </p>
+      </form>
+
+      <!-- Signup Form -->
+      <form id="signupForm" class="auth-form" style="display:none;">
+        <div class="form-header">
+          <h2>Join ConnectKind</h2>
+          <div class="animated-icons">
+            <div class="icon-circle"></div>
+            <i class="material-icons">person_add</i>
+          </div>
+        </div>
+        <div class="input-group">
+          <input type="email" id="signupEmail" required autocomplete="username">
+          <label for="signupEmail">Email</label>
+          <i class="material-icons input-icon">mail</i>
+        </div>
+        <div class="input-group">
+          <input type="password" id="signupPassword" required autocomplete="new-password">
+          <label for="signupPassword">Password</label>
+          <i class="material-icons input-icon">lock</i>
+        </div>
+        <button type="submit" class="auth-btn">
+          <span class="btn-text">Sign Up</span>
+        </button>
+        <p class="switch-auth">
+          Existing user? <a href="#" id="showLogin">Login Instead</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Firebase & Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>

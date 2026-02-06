@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat | ConnectKind</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="chat.css">
+</head>
+<body class="chat-page">
+  <!-- Navbar -->
+  <nav class="custom-navbar z-depth-1">
+    <div class="nav-content container">
+      <a href="index.html" class="nav-logo-link">
+        <img src="logo.png" alt="ConnectKind Logo" class="nav-logo-img">
+        <span class="nav-logo-text">ConnectKind</span>
+      </a>
+      <span id="nav-username" class="nav-username"></span>
+      <ul class="nav-links">
+        <li><a href="profile.html"><i class="material-icons left">person</i>Profile</a></li>
+        <li><a href="add-listing.html"><i class="material-icons left">add</i>Add Listing</a></li>
+        <li><a href="search.html"><i class="material-icons left">search</i>Search</a></li>
+        <li><a href="#" id="logout"><i class="material-icons left">exit_to_app</i>Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container chat-container">
+    <div class="chat-layout">
+      <!-- Users List Panel -->
+      <div class="users-panel">
+        <h5>Users</h5>
+        <div id="users-list"></div>
+      </div>
+      <!-- Chat Messages Panel -->
+      <div class="chat-panel">
+        <div class="chat-header">
+          <h5 id="chat-partner-name">Select a user to chat with!</h5>
+        </div>
+        <div class="chat-messages" id="chat-messages"></div>
+        <div class="chat-input">
+          <div class="input-field">
+            <input type="text" id="message-input" placeholder="Type your message..." disabled>
+            <button id="send-button" class="btn waves-effect waves-light" disabled>
+              <i class="material-icons">send</i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="chat.js"></script>
+</body>
+</html>

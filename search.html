@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Discover | ConnectKind</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="search.css">
+</head>
+<body class="search-page">
+ <div class="animated-bg-image"></div>
+  <!-- Navigation Bar -->
+  <nav class="custom-navbar z-depth-1">
+    <div class="nav-content container">
+      <a href="index.html" class="nav-logo-link">
+        <img src="logo.png" alt="ConnectKind Logo" class="nav-logo-img">
+        <span class="nav-logo-text">ConnectKind</span>
+      </a>
+      <span id="nav-username" class="nav-username"></span>
+      <ul class="nav-links">
+        <li><a href="profile.html"><i class="material-icons left">person</i>Profile</a></li>
+        <li><a href="add-listing.html"><i class="material-icons left">add</i>Add Listing</a></li>
+        <li><a href="chat.html"><i class="material-icons left">chat</i>Chat</a></li>
+        <li><a href="#" id="logout"><i class="material-icons left">exit_to_app</i>Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Search Section -->
+  <div class="container search-container">
+    <h4 class="center-align">Search for Skills or Resources</h4>
+    <div class="input-field search-bar-field">
+      <i class="material-icons prefix">search</i>
+      <input type="text" id="search-bar" placeholder="Search for anything...">
+    </div>
+    <div id="search-results" class="results-list"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="search.js"></script>
+</body>
+</html>
