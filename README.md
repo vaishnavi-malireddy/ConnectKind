@@ -1,16 +1,11 @@
 # ConnectKind – Community Skill & Resource Exchange Web Application
 
 This project provides a web-based community platform that enables users to share skills and resources locally without monetary transactions. The application allows users to register, create profiles, post listings, search for resources, and communicate instantly through real-time chat.  
-
 The backend is implemented using Firebase services including Authentication, Firestore, and Hosting.
-
----
 
 ## Architecture Diagram
 
 ![Architecture Diagram](architecture.png)
-
----
 
 ## Components
 
@@ -33,7 +28,7 @@ Provides:
 - Real-time chat interface  
 - Client-side form validation  
 
----
+
 
 ### Backend (Serverless – Firebase)
 
@@ -47,7 +42,6 @@ Provides:
 - **Firebase Hosting**  
   Hosts and deploys the web application securely.
 
----
 
 ## Usage
 
@@ -57,8 +51,6 @@ Provides:
 4. Add a skill or resource listing.  
 5. Search for available listings.  
 6. Start real-time chat with listing owners.  
-
----
 
 ## File Overview
 
@@ -72,8 +64,6 @@ Provides:
 - *.css – Styling files  
 - architecture.png – System architecture diagram  
 
----
-
 ## Deployment
 
 The application is deployed using Firebase Hosting.
@@ -81,7 +71,7 @@ The application is deployed using Firebase Hosting.
 Live URL:  
 https://communityexchange-a9cb5.web.app  
 
----
+
 
 ## Notes
 
