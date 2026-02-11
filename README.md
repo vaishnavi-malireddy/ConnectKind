@@ -72,7 +72,7 @@ Live URL:
 https://communityexchange-a9cb5.web.app  
 
 Test commit from [vaishnavi-malireddy]
-
+minor update from [vaishnavi malireddy]
 ## Notes
 
 - The application follows a serverless architecture using Firebase.  
