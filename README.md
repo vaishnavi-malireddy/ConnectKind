@@ -73,6 +73,18 @@ https://communityexchange-a9cb5.web.app
 
 Test commit from [vaishnavi-malireddy]
 minor update from [vaishnavi malireddy]
+
+
+##  Team Members
+
+ConnectKind was developed as a collaborative academic project by:
+
+- Kavya – Frontend Development & Firebase Integration
+- Harika– UI Design & Real-Time Chat Implementation
+- Vaishnavi – Database Structure & Testing
+
+All members contributed equally to the overall development and implementation of the project.
+
 ## Notes
 
 - The application follows a serverless architecture using Firebase.  
